@@ -1,0 +1,23 @@
+1. If you were to describe semantic HTML to the next cohort of students, what would you say?
+    
+    I would describe semantic HTML as a way to provide meaning to different sections of your webpage so that CSS can be added in an effective way. Semantic HTML would be the foundation or backbone of your webpage, and allows for your webpage to be recognized by search engines and to be properly displayed.
+
+2. What are the 4 areas of the box model?
+    
+    - content
+    - padding
+    - border
+    - margin
+
+3. While using flexbox, what axis does the following property work on: align-items: center?
+   
+    - the cross axis
+
+4. Explain why git is valuable to a team of developers.
+   
+    - git allows for version control so you can see exact changes that were made by your team and for multiple people to work on the project at once by using branches
+    - if someone makes a mistake that breaks the website, it is possible to revert to an earlier version without having to start all over
+
+5. Define mobile-first design in your own words.
+
+    Mobile-first design means starting the CSS with the smallest width in mind so with min-width and then scaling up from there. This allows for the most basic and important features to be showcased on the mobile website and then adding more advanced features from there to the tablet and desktop websites.

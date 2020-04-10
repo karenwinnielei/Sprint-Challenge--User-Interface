@@ -21,15 +21,22 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    /* border: 1px solid gray; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html{
+    font-size: 62.5%;
+}
+
 body {
-	line-height: 1;
+    font-size: 1.6rem;
+    line-height: 1;
 }
 ol, ul {
 	list-style: none;
@@ -49,6 +56,7 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html, body {
@@ -57,7 +65,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -71,6 +79,31 @@ p {
     margin: 0 auto;
 }
 
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 20%;
+    display: flex;
+    align-items: flex-end;
+}
+
+nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -78,6 +111,17 @@ p {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.image-container img{
+    width: 100%;
+}
+
 
 .top-content .text-container {
     width: 48%;
@@ -105,11 +149,51 @@ p {
     width: 12.5%;
     height: 100px;
     background: black;
-    margin: 20px 2.5%;
+    margin: 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.middle-content .boxes .box:nth-child(1){
+    background: teal;
+}
+
+.middle-content .boxes .box:nth-child(2){
+    background: gold;
+}
+
+.middle-content .boxes .box:nth-child(3){
+    background: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4){
+    background: coral;
+}
+
+.middle-content .boxes .box:nth-child(5){
+    background: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6){
+    background: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7){
+    background: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8){
+    background: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9){
+    background: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10){
+    background: dodgerblue;
 }
 
 .bottom-content {
@@ -137,10 +221,111 @@ footer nav {
     justify-content: space-between;
     align-items: center;
     padding: 20px 2%;
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 800px){
+    body{
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .top-content .text-container{
+        width: 45%;
+    }
+
+    .middle-content .boxes .box{
+        height: 95px;
+    }
+}
+
+@media (max-width: 500px){
+    body{
+        font-size: 1.4rem;
+    }
+
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .logo{
+        width: 100%;
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
+    }
+
+    header nav{
+        width: 80%;
+        display: block;
+    }
+
+    header nav a{
+        display: block;
+        border: 1px solid gainsboro;
+        border-radius: 5px;
+        padding: 2% 0;
+        text-align: center;
+        color: gainsboro;
+
+    }
+
+    header nav a:hover{
+        background: rgb(247, 246, 246);
+        font-weight: 900;
+        color: grey;
+    }
+
+    nav a:nth-child(3){
+        display: none;
+    }
+
+    p{
+        color: gray;
+    }
+    .top-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .top-content .text-container {
+        width: 100%;
+        padding: 0 1%;
+        padding-bottom: 20px;  
+    }
+
+    .middle-content h2{
+        text-align: center;
+    }
+
+    .middle-content .boxes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle-content .boxes .box{
+        width: 25%;
+    }
+
+    .bottom-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-content .text-container {
+        width: 100%;
+        padding: 0 1%;
+        padding-bottom: 20px;  
+    }
+
+
 }
