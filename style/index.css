@@ -329,3 +329,16 @@ footer nav a {
 
 
 }
+
+.top-content.about{
+    width: 100%;
+}
+
+.about .text-container{
+    width: 95%;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+}
