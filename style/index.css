@@ -21,7 +21,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    /* border: 1px solid gray; */
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -49,6 +50,8 @@ table {
 
 * {
     box-sizing: border-box;
+    max-width: 100%;
+    font-size: 62.5%;
 }
 
 html, body {
@@ -57,7 +60,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5 {
-    font-size: 18px;
+    font-size: 1.8rem;
     margin-bottom: 15px;
     font-family: 'Rubik', sans-serif;
 }
@@ -67,8 +70,31 @@ p {
 }
 
 .container {
-    width: 800px;
+    width: 80rem;
     margin: 0 auto;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px 0;
+}
+
+.logo{
+    width: 20%;
+}
+
+nav{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
 }
 
 .top-content {
@@ -78,6 +104,17 @@ p {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
+
+.image-container{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.image-container img{
+    width: 100%;
+}
+
 
 .top-content .text-container {
     width: 48%;
@@ -112,6 +149,46 @@ p {
     justify-content: center;
 }
 
+.middle-content .boxes .box:nth-child(1){
+    background: teal;
+}
+
+.middle-content .boxes .box:nth-child(2){
+    background: gold;
+}
+
+.middle-content .boxes .box:nth-child(3){
+    background: cadetblue;
+}
+
+.middle-content .boxes .box:nth-child(4){
+    background: coral;
+}
+
+.middle-content .boxes .box:nth-child(5){
+    background: crimson;
+}
+
+.middle-content .boxes .box:nth-child(6){
+    background: forestgreen;
+}
+
+.middle-content .boxes .box:nth-child(7){
+    background: darkorchid;
+}
+
+.middle-content .boxes .box:nth-child(8){
+    background: hotpink;
+}
+
+.middle-content .boxes .box:nth-child(9){
+    background: indigo;
+}
+
+.middle-content .boxes .box:nth-child(10){
+    background: dodgerblue;
+}
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -143,4 +220,24 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+}
+
+@media (max-width: 800px){
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a:nth-child(3){
+        display: none;
+    }
+
+
 }
